@@ -1,0 +1,119 @@
+:root {
+  --ast-global-color-0: #0170B9;
+  --ast-global-color-1: #3a3a3a;
+  --ast-global-color-2: #3a3a3a;
+  --ast-global-color-3: #4B4F58;
+  --ast-global-color-4: #F5F5F5;
+  --ast-global-color-5: #FFFFFF;
+  --ast-global-color-6: #E5E5E5;
+  --ast-global-color-7: #424242;
+  --ast-global-color-8: #000000;
+  
+  --primary: var(--ast-global-color-0);
+  --primary-hover: #015a96;
+  --text-dark: var(--ast-global-color-1);
+  --text-muted: var(--ast-global-color-3);
+  --bg-light: var(--ast-global-color-4);
+  --bg-white: var(--ast-global-color-5);
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Buttons */
+.btn-primary-custom {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover, .btn-primary-custom:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(1, 112, 185, 0.3);
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover, .btn-outline-custom:focus {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Sections */
+.section-padding {
+  padding: 80px 0;
+}
+
+.bg-light-custom {
+  background-color: var(--bg-light);
+}
+
+/* Top bar */
+.top-bar {
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.top-bar a:hover {
+  opacity: 0.8;
+}
+
+/* Form Customization */
+.form-step-container {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(1, 112, 185, 0.25);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
