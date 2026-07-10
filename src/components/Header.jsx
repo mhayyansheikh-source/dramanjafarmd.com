@@ -70,8 +70,8 @@ export default function Header() {
             {/* CTAs */}
             <Nav className="ms-auto align-items-lg-center">
               <div className="d-none d-xl-flex flex-column text-end me-4">
-                <small className="text-muted fw-semibold" style={{ fontSize: "0.75rem", letterSpacing: "1px" }}>CALL US 24/7</small>
-                <a href="tel:+12817711261" className="fw-bold text-primary text-decoration-none" style={{ fontSize: "1.1rem" }}>281-771-1261</a>
+                <small className="text-muted fw-semibold text-nowrap" style={{ fontSize: "0.75rem", letterSpacing: "1px" }}>CALL US 24/7</small>
+                <a href="tel:+12817711261" className="fw-bold text-primary text-decoration-none text-nowrap" style={{ fontSize: "1.1rem" }}>281-771-1261</a>
               </div>
               
               <Button as={Link} href="/appointment" variant="primary" className="btn-primary-custom rounded-pill px-4 py-2 fw-semibold shadow-sm w-100 w-lg-auto mt-3 mt-lg-0">
