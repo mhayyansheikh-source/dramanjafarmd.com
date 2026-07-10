@@ -1,75 +1,74 @@
 "use client";
 
-import { Container, Row, Col, Button, Badge } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUserMd, FaCheckCircle } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
-    <div className="py-5 bg-white" id="about">
-      <Container className="py-md-5">
+    <div className="section-padding bg-canvas" id="about">
+      <Container>
         <Row className="align-items-center gy-5">
           {/* Left Side: Professional Image */}
           <Col lg={5} className="position-relative">
-            <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ minHeight: "500px" }}>
+            <div className="position-relative overflow-hidden" style={{ minHeight: "500px", borderRadius: "var(--rounded-xl)" }}>
               <Image 
                 src="https://dramanjafarmd.com/wp-content/uploads/2020/11/DSC00645-1024x577.jpg"
                 alt="Dr. Aman Jafar MD" 
                 fill 
                 style={{ objectFit: "cover", objectPosition: "center" }}
-                className="hover-scale transition-all"
               />
             </div>
             
-            {/* Floating Badge */}
-            <div className="position-absolute bottom-0 start-0 translate-middle-x bg-primary text-white p-4 rounded-3 shadow-lg ms-5 mb-5 d-none d-md-block">
-              <h3 className="fw-bold mb-0">20+</h3>
-              <p className="mb-0 small fw-semibold text-uppercase" style={{ letterSpacing: "1px" }}>Years Experience</p>
+            {/* Floating Badge - Restyled as a feature tag */}
+            <div className="position-absolute bottom-0 start-0 translate-middle-x bg-ink text-white p-3 shadow-soft-lift ms-5 mb-5 d-none d-md-block" style={{ borderRadius: "var(--rounded-xl)", border: "1px solid rgba(255,255,255,0.1)" }}>
+              <h3 className="display-md mb-0 text-white">20+</h3>
+              <p className="mb-0 text-cloud" style={{ fontSize: "14px", fontWeight: 700 }}>Years Experience</p>
             </div>
           </Col>
 
           {/* Right Side: Welcome Narrative */}
           <Col lg={6} className="offset-lg-1">
-            <Badge bg="primary" className="px-3 py-2 rounded-pill mb-3 fw-semibold text-uppercase" style={{ letterSpacing: "2px" }}>
+            <span className="badge-pill-outline d-inline-block mb-3">
               Meet The Doctor
-            </Badge>
-            <h2 className="display-5 fw-bold mb-4 text-dark">
+            </span>
+            <h2 className="display-xl mb-4 text-ink">
               Welcome to <span className="text-primary">Dr. Aman Jafar MD</span>
             </h2>
-            <p className="lead text-muted mb-4">
+            <p className="text-ink fs-5 mb-4" style={{ fontWeight: 400 }}>
               Providing compassionate, comprehensive medical care for your entire family in Sugar Land, Texas.
             </p>
-            <p className="text-secondary mb-4 lh-lg">
+            <p className="text-charcoal mb-4">
               At our practice, we treat every patient like family. With extensive experience in Internal Medicine, Pediatrics, and Geriatrics, Dr. Jafar is committed to delivering highly personalized care. Whether you are seeking preventive healthcare, chronic disease management, or acute care, we are here to support your journey to optimal health.
             </p>
             
             <Row className="mb-4 g-3">
               <Col sm={6}>
-                <div className="d-flex align-items-center text-dark fw-semibold">
+                <div className="d-flex align-items-center text-ink" style={{ fontWeight: 500 }}>
                   <FaCheckCircle className="text-primary me-2" size={20} /> Board Certified
                 </div>
               </Col>
               <Col sm={6}>
-                <div className="d-flex align-items-center text-dark fw-semibold">
+                <div className="d-flex align-items-center text-ink" style={{ fontWeight: 500 }}>
                   <FaCheckCircle className="text-primary me-2" size={20} /> Texas Medical Board
                 </div>
               </Col>
               <Col sm={6}>
-                <div className="d-flex align-items-center text-dark fw-semibold">
+                <div className="d-flex align-items-center text-ink" style={{ fontWeight: 500 }}>
                   <FaCheckCircle className="text-primary me-2" size={20} /> Compassionate Care
                 </div>
               </Col>
               <Col sm={6}>
-                <div className="d-flex align-items-center text-dark fw-semibold">
+                <div className="d-flex align-items-center text-ink" style={{ fontWeight: 500 }}>
                   <FaCheckCircle className="text-primary me-2" size={20} /> Modern Facility
                 </div>
               </Col>
             </Row>
 
-            <Button as={Link} href="/about" variant="outline-primary" size="lg" className="rounded-pill px-5 fw-bold mt-2 hover-white">
-              <FaUserMd className="me-2" /> Read Full Biography
-            </Button>
+            <Link href="/about" className="btn button-outline mt-3 d-inline-flex align-items-center gap-2">
+              <FaUserMd /> Read Full Biography
+            </Link>
           </Col>
         </Row>
       </Container>

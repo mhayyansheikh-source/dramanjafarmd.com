@@ -38,35 +38,35 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-5 bg-light">
+    <section className="section-padding bg-cloud">
       <Container>
         <Row className="justify-content-center">
           <Col lg={8} md={10}>
             <div className="text-center mb-5">
-              <h2 className="display-5 fw-bold text-dark mb-3">Frequently Asked Questions</h2>
-              <p className="lead text-muted">
+              <h2 className="display-md text-ink mb-3">Frequently Asked Questions</h2>
+              <p className="text-charcoal" style={{ fontSize: "18px" }}>
                 Find answers to common questions about appointments, insurance, and the care we provide.
               </p>
             </div>
             
-            <Accordion defaultActiveKey="0" className="faq-accordion shadow-sm">
+            <Accordion defaultActiveKey="0" className="faq-accordion">
               {faqs.map((faq, index) => (
-                <Accordion.Item eventKey={index.toString()} key={index} className="border-0 border-bottom">
-                  <Accordion.Header className="fw-semibold text-dark">
+                <Accordion.Item eventKey={index.toString()} key={index} className="faq-row">
+                  <Accordion.Header className="text-ink">
                     {faq.question}
                   </Accordion.Header>
-                  <Accordion.Body className="text-muted lh-lg">
+                  <Accordion.Body className="text-charcoal">
                     {faq.answer}
                   </Accordion.Body>
                 </Accordion.Item>
               ))}
             </Accordion>
 
-            <div className="mt-5 text-center bg-white p-4 rounded-3 shadow-sm border">
-              <h4 className="fw-bold mb-3">Still have questions?</h4>
-              <p className="text-muted mb-4">Our dedicated team is ready to assist you.</p>
-              <Link href="tel:281-771-1261" className="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
-                <FaPhoneAlt className="me-2 mb-1" /> Call Us: 281-771-1261
+            <div className="mt-5 text-center bg-canvas p-4 shadow-soft-lift" style={{ borderRadius: "var(--rounded-xl)" }}>
+              <h4 className="display-xs mb-3 text-ink">Still have questions?</h4>
+              <p className="text-charcoal mb-4">Our dedicated team is ready to assist you.</p>
+              <Link href="tel:281-771-1261" className="btn button-primary d-inline-flex align-items-center gap-2">
+                <FaPhoneAlt /> Call Us: 281-771-1261
               </Link>
             </div>
           </Col>

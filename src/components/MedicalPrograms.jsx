@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -9,7 +9,7 @@ export default function MedicalPrograms() {
     {
       title: "Primary Care",
       desc: "Comprehensive health assessments and routine care.",
-      img: "https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?q=80&w=2070&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop",
       link: "/services"
     },
     {
@@ -45,63 +45,46 @@ export default function MedicalPrograms() {
   ];
 
   return (
-    <div className="py-5 bg-light" id="programs">
-      <Container className="py-md-4">
+    <div className="section-padding bg-cloud" id="programs">
+      <Container>
         <div className="text-center mb-5">
-          <h2 className="display-5 fw-bold text-dark mb-3">Comprehensive <span className="text-primary">Medical Programs</span></h2>
-          <p className="lead text-muted mx-auto" style={{ maxWidth: "700px" }}>
+          <h2 className="display-lg text-ink mb-3">
+            Comprehensive Medical Programs
+          </h2>
+          <p className="text-charcoal mx-auto" style={{ maxWidth: "700px" }}>
             We offer a wide range of specialized healthcare services to ensure every member of your family receives the exact care they need.
           </p>
         </div>
 
         <Row className="g-4">
           {programs.map((prog, idx) => (
-            <Col lg={4} md={6} key={idx}>
-              <Card className="h-100 border-0 rounded-4 overflow-hidden shadow-sm group-hover-overlay" style={{ cursor: "pointer" }}>
-                <div className="position-relative" style={{ height: "250px", overflow: "hidden" }}>
-                  <Card.Img 
-                    variant="top" 
+            <Col lg={4} md={6} key={idx} className="d-flex">
+              <div className="card-product w-100 d-flex flex-column p-0 overflow-hidden">
+                <div style={{ height: "250px", overflow: "hidden" }}>
+                  <img 
                     src={prog.img} 
-                    className="h-100 w-100 object-fit-cover transition-all"
+                    alt={prog.title}
+                    className="w-100 h-100 object-fit-cover"
                   />
-                  {/* Dark Overlay that appears on hover */}
-                  <div 
-                    className="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center overlay-content transition-all"
-                  >
-                    <Link href={prog.link} className="btn btn-outline-light rounded-pill px-4 fw-semibold border-2 d-flex align-items-center gap-2 hover-white">
-                      Explore Program <FaArrowRight />
-                    </Link>
-                  </div>
                 </div>
-                <Card.Body className="p-4 bg-white text-center z-index-1">
-                  <Card.Title className="fw-bold text-dark fs-4 mb-3">{prog.title}</Card.Title>
-                  <Card.Text className="text-muted">{prog.desc}</Card.Text>
-                </Card.Body>
-              </Card>
+                <div className="p-4 d-flex flex-column flex-grow-1 bg-canvas text-start">
+                  <h3 className="display-xs text-ink mb-2">{prog.title}</h3>
+                  <p className="text-charcoal mb-4 flex-grow-1">{prog.desc}</p>
+                  <Link href={prog.link} className="btn button-outline w-100">
+                    Explore Program
+                  </Link>
+                </div>
+              </div>
             </Col>
           ))}
         </Row>
         
         <div className="text-center mt-5">
-           <Link href="/services" className="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow-sm hover-scale">
+           <Link href="/services" className="btn button-primary">
              View All Medical Services
            </Link>
         </div>
       </Container>
-      
-      <style dangerouslySetInnerHTML={{__html: `
-        .group-hover-overlay .overlay-content {
-          opacity: 0;
-          visibility: hidden;
-        }
-        .group-hover-overlay:hover .overlay-content {
-          opacity: 1;
-          visibility: visible;
-        }
-        .group-hover-overlay:hover .card-img-top {
-          transform: scale(1.1);
-        }
-      `}} />
     </div>
   );
 }

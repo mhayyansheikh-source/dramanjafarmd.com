@@ -5,18 +5,18 @@ import { FaShieldAlt, FaStarOfLife, FaHeartbeat, FaRegHospital } from "react-ico
 
 export default function InsurancePartners() {
   const partners = [
-    { name: "Medicare", icon: <FaRegHospital size={30} className="mb-2 text-secondary" /> },
-    { name: "BlueCross BlueShield", icon: <FaShieldAlt size={30} className="mb-2 text-secondary" /> },
-    { name: "Aetna", icon: <FaStarOfLife size={30} className="mb-2 text-secondary" /> },
-    { name: "Cigna", icon: <FaHeartbeat size={30} className="mb-2 text-secondary" /> },
-    { name: "UnitedHealthcare", icon: <FaShieldAlt size={30} className="mb-2 text-secondary" /> },
+    { name: "Medicare", icon: <FaRegHospital size={30} className="mb-2 text-charcoal" /> },
+    { name: "BlueCross BlueShield", icon: <FaShieldAlt size={30} className="mb-2 text-charcoal" /> },
+    { name: "Aetna", icon: <FaStarOfLife size={30} className="mb-2 text-charcoal" /> },
+    { name: "Cigna", icon: <FaHeartbeat size={30} className="mb-2 text-charcoal" /> },
+    { name: "UnitedHealthcare", icon: <FaShieldAlt size={30} className="mb-2 text-charcoal" /> },
   ];
 
   return (
-    <div className="bg-light py-5 border-bottom">
+    <div className="bg-canvas py-5 border-bottom border-hairline">
       <Container>
         <div className="text-center mb-4">
-          <p className="text-muted fw-bold text-uppercase" style={{ letterSpacing: "2px", fontSize: "0.85rem" }}>
+          <p className="text-charcoal" style={{ fontSize: "14px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
             Trusted by Major Health Insurance Providers
           </p>
         </div>
@@ -24,17 +24,16 @@ export default function InsurancePartners() {
           {partners.map((partner, index) => (
             <Col xs={6} md={4} lg={2} key={index} className="text-center">
               <div 
-                className="partner-logo-placeholder p-3 rounded bg-white shadow-sm border border-light hover-scale transition-all d-flex flex-column align-items-center justify-content-center"
-                style={{ height: "100px", filter: "grayscale(100%) opacity(0.7)", cursor: "default" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.filter = "grayscale(0%) opacity(1)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.filter = "grayscale(100%) opacity(0.7)";
+                className="p-3 bg-canvas d-flex flex-column align-items-center justify-content-center transition-all"
+                style={{ 
+                  height: "100px", 
+                  borderRadius: "var(--rounded-lg)", 
+                  border: "1px solid var(--color-hairline)",
+                  cursor: "default" 
                 }}
               >
                 {partner.icon}
-                <span className="fw-semibold text-dark" style={{ fontSize: "0.85rem" }}>{partner.name}</span>
+                <span className="text-ink" style={{ fontSize: "12px", fontWeight: 600 }}>{partner.name}</span>
               </div>
             </Col>
           ))}

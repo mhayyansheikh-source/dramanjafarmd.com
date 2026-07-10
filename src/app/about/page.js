@@ -69,9 +69,41 @@ export default function AboutPage() {
           <Row className="gy-4 text-center">
             <Col md={12}>
               <h3 className="fw-bold text-dark mb-4">Our State-of-the-Art Facility</h3>
-              <p className="text-muted fs-5 max-w-700 mx-auto">
+              <p className="text-muted fs-5 max-w-700 mx-auto mb-5">
                 Conveniently located in the heart of Sugar Land at <strong>3531 Town Center Blvd</strong>, our clinic is designed to provide a welcoming, comfortable, and safe environment for you and your loved ones.
               </p>
+            </Col>
+          </Row>
+          <Row className="gy-4">
+            <Col md={4}>
+              <div className="position-relative rounded-4 overflow-hidden shadow-sm" style={{ height: "300px" }}>
+                <Image 
+                  src="https://dramanjafarmd.com/wp-content/uploads/2021/07/WhatsApp-Image-2021-07-12-at-20.22.42.jpeg" 
+                  alt="Clinic Exterior" 
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="position-relative rounded-4 overflow-hidden shadow-sm" style={{ height: "300px" }}>
+                <Image 
+                  src="https://dramanjafarmd.com/wp-content/uploads/2020/11/WhatsApp-Image-2020-11-22-at-00.51.20.jpeg" 
+                  alt="Clinic Interior" 
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="position-relative rounded-4 overflow-hidden shadow-sm" style={{ height: "300px" }}>
+                <Image 
+                  src="https://dramanjafarmd.com/wp-content/uploads/2021/01/Capture.jpg" 
+                  alt="Clinic Facilities" 
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             </Col>
           </Row>
         </div>
