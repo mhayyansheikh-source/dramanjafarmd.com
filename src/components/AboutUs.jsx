@@ -19,8 +19,8 @@ export default function AboutUs() {
             >
               <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ aspectRatio: "4/3" }}>
                 <Image 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Doctor with patient"
+                  src="/images/dr-aman-jafar.jpeg" 
+                  alt="Dr. Aman Jafar"
                   fill
                   style={{ objectFit: "cover" }}
                 />

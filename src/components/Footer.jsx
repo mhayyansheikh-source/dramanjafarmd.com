@@ -12,7 +12,7 @@ export default function Footer() {
         <Row className="gy-4 mb-4">
           <Col lg={4} md={6}>
             <Image 
-              src="https://dramanjafarmd.com/wp-content/uploads/2020/11/logo-3.png" 
+              src="/images/logo.png" 
               alt="Dr. Aman Jafar Logo" 
               width={200} 
               height={55}

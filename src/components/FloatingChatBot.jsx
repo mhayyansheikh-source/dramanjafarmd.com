@@ -118,7 +118,7 @@ export default function FloatingChatBot() {
               <div className="d-flex align-items-center gap-2">
                 <div className="bg-white rounded-circle p-1 d-flex align-items-center justify-content-center shadow-sm" style={{ width: "40px", height: "40px" }}>
                   <Image 
-                    src="https://dramanjafarmd.com/wp-content/uploads/2020/11/logo-3.png" 
+                    src="/images/logo.png" 
                     alt="Logo" 
                     width={30} 
                     height={30} 

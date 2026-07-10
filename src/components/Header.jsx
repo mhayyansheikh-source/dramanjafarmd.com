@@ -25,15 +25,18 @@ export default function Header() {
       style={{ transition: "all 0.3s ease" }}
     >
       <Container>
-        <Navbar.Brand href="/">
-          <Image 
-            src="https://dramanjafarmd.com/wp-content/uploads/2020/11/logo-3.png" 
-            alt="Dr. Aman Jafar Logo" 
-            width={200} 
-            height={55}
-            style={{ objectFit: "contain" }}
-          />
-        </Navbar.Brand>
+        {/* Logo */}
+        <Link href="/" className="d-flex align-items-center me-4">
+          <div className="position-relative" style={{ width: "200px", height: "60px" }}>
+            <Image 
+              src="/images/logo.png" 
+              alt="Dr. Aman Jafar MD" 
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-lg-center gap-3">
