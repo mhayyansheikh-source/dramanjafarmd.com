@@ -5,6 +5,8 @@ import AboutUs from "@/components/AboutUs";
 import Categories from "@/components/Categories";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
+import FacilityGallery from "@/components/FacilityGallery";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FomoElement from "@/components/FomoElement";
 
@@ -21,6 +23,8 @@ export default function Home() {
         <Categories />
         <Services />
         <Testimonials />
+        <FacilityGallery />
+        <FinalCTA />
       </div>
 
       <Footer />

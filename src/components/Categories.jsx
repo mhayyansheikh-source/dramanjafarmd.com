@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { FaUserMd, FaHeartbeat, FaStethoscope, FaSyringe } from "react-icons/fa";
 
 const categories = [
-  { title: "Children", icon: <FaStethoscope size={40} />, desc: "Pediatric care, vaccinations, and wellness checks for your little ones." },
-  { title: "Adults", icon: <FaUserMd size={40} />, desc: "Comprehensive primary care, physicals, and preventative medicine." },
-  { title: "Elderly", icon: <FaHeartbeat size={40} />, desc: "Geriatric care focused on maintaining health, mobility, and managing chronic conditions." },
-  { title: "Parents", icon: <FaSyringe size={40} />, desc: "Family planning, parental health guidance, and general wellness." }
+  { title: "Pediatric Care", icon: <FaStethoscope size={40} />, desc: "Pediatric care, vaccinations, and wellness checks for your little ones." },
+  { title: "Adult Preventative", icon: <FaUserMd size={40} />, desc: "Comprehensive primary care, physicals, and preventative medicine." },
+  { title: "Geriatric Health", icon: <FaHeartbeat size={40} />, desc: "Geriatric care focused on maintaining health, mobility, and managing chronic conditions." },
+  { title: "Family Planning", icon: <FaSyringe size={40} />, desc: "Family planning, parental health guidance, and general wellness." }
 ];
 
 export default function Categories() {

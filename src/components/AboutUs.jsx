@@ -18,10 +18,12 @@ export default function AboutUs() {
               className="position-relative"
             >
               <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ aspectRatio: "4/3" }}>
-                {/* Placeholder for doctor image */}
-                <div className="w-100 h-100 bg-light d-flex align-items-center justify-content-center text-muted">
-                  [Doctor Image Placeholder]
-                </div>
+                <Image 
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" 
+                  alt="Doctor with patient"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               
               {/* Experience Badge */}

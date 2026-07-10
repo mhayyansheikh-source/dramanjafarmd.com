@@ -42,7 +42,10 @@ export default function Header() {
             <Nav.Link as={Link} href="/patients" className="fw-semibold text-dark">Patient Resources</Nav.Link>
             <Nav.Link as={Link} href="/blog" className="fw-semibold text-dark">Blog</Nav.Link>
             <Nav.Link as={Link} href="/contact" className="fw-semibold text-dark">Contact</Nav.Link>
-            <Button variant="primary" className="btn-primary-custom ms-lg-3 mt-3 mt-lg-0">
+            <Button as={Link} href="/insurance" variant="outline-primary" className="ms-lg-3 mt-3 mt-lg-0 border-2 fw-semibold">
+              Verify Insurance
+            </Button>
+            <Button variant="primary" className="btn-primary-custom ms-lg-2 mt-3 mt-lg-0 shadow-sm fw-semibold">
               Book Appointment
             </Button>
           </Nav>

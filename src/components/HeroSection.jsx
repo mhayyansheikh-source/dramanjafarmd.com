@@ -1,8 +1,9 @@
 "use client";
 
-import { Container, Row, Col, Badge } from "react-bootstrap";
+import { Container, Row, Col, Badge, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaPhoneAlt, FaShieldAlt } from "react-icons/fa";
+import Link from "next/link";
 import StepForm from "./StepForm";
 
 export default function HeroSection() {
@@ -34,16 +35,13 @@ export default function HeroSection() {
                 Compassionate primary care for parents, adults, elderly patients, and children. Dr. Aman Jafar and the team are here to keep your family healthy.
               </p>
               
-              <div className="d-flex flex-wrap gap-3">
-                <Badge bg="white" text="dark" className="border px-3 py-2 rounded-pill shadow-sm">
-                  <span className="text-success me-1">●</span> Accepting New Patients
-                </Badge>
-                <Badge bg="white" text="dark" className="border px-3 py-2 rounded-pill shadow-sm">
-                  ✓ COVID-19 Vaccines Available
-                </Badge>
-                <Badge bg="white" text="dark" className="border px-3 py-2 rounded-pill shadow-sm">
-                  ✓ Walk-ins Welcome
-                </Badge>
+              <div className="d-flex flex-wrap gap-3 mb-4">
+                <Button as={Link} href="tel:+12817711261" variant="primary" size="lg" className="btn-primary-custom shadow fw-bold d-flex align-items-center gap-2">
+                  <FaPhoneAlt /> Call Us 24/7
+                </Button>
+                <Button as={Link} href="/insurance" variant="outline-primary" size="lg" className="border-2 fw-bold d-flex align-items-center gap-2 bg-white">
+                  <FaShieldAlt /> Verify Insurance
+                </Button>
               </div>
             </motion.div>
           </Col>
@@ -59,6 +57,23 @@ export default function HeroSection() {
             </motion.div>
           </Col>
         </Row>
+        
+        {/* Trust Banner */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-5 pt-4 border-top"
+        >
+          <p className="text-center text-muted fw-semibold mb-3">ACCEPTED INSURANCES INCLUDE:</p>
+          <div className="d-flex flex-wrap justify-content-center gap-4 align-items-center opacity-75">
+            <h5 className="mb-0 fw-bold text-secondary">Medicare</h5>
+            <h5 className="mb-0 fw-bold text-secondary">BlueCross BlueShield</h5>
+            <h5 className="mb-0 fw-bold text-secondary">Aetna</h5>
+            <h5 className="mb-0 fw-bold text-secondary">Cigna</h5>
+            <h5 className="mb-0 fw-bold text-secondary">UnitedHealthcare</h5>
+          </div>
+        </motion.div>
       </Container>
     </section>
   );
