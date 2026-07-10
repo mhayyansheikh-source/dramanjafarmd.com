@@ -18,13 +18,6 @@ export const metadata = {
     description: "Reliable and top-notch medical services for parents, adults, elderly patients, and children.",
     url: "https://dramanjafarmd.com/",
     siteName: "Dr. Aman Jafar",
-    images: [
-      {
-        url: "https://dramanjafarmd.com/wp-content/uploads/2020/11/logo-3.png",
-        width: 200,
-        height: 200,
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
