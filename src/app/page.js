@@ -1,6 +1,7 @@
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import InsurancePartners from "@/components/InsurancePartners";
 import AboutUs from "@/components/AboutUs";
 import Categories from "@/components/Categories";
 import Services from "@/components/Services";
@@ -19,6 +20,7 @@ export default function Home() {
       
       <div className="flex-grow-1">
         <HeroSection />
+        <InsurancePartners />
         <AboutUs />
         <Categories />
         <Services />
