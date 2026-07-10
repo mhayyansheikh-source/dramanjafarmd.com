@@ -13,12 +13,11 @@ export default function AboutUs() {
           {/* Left Side: Professional Image */}
           <Col lg={5} className="position-relative">
             <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ minHeight: "500px" }}>
-              {/* Note: User should replace this placeholder with Dr. Jafar's real high-quality photo in public/images/ */}
               <Image 
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"
+                src="https://dramanjafarmd.com/wp-content/uploads/2020/11/DSC00645-1024x577.jpg"
                 alt="Dr. Aman Jafar MD" 
                 fill 
-                style={{ objectFit: "cover", objectPosition: "top" }}
+                style={{ objectFit: "cover", objectPosition: "center" }}
                 className="hover-scale transition-all"
               />
             </div>
