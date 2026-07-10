@@ -1,80 +1,90 @@
 "use client";
 
-import { Container, Row, Col, Badge, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
-import { FaStar, FaPhoneAlt, FaShieldAlt } from "react-icons/fa";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import Link from "next/link";
-import StepForm from "./StepForm";
+import { FaCalendarAlt, FaShieldAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="position-relative bg-light-custom overflow-hidden" style={{ padding: "100px 0" }}>
-      {/* Background decoration */}
-      <div className="position-absolute rounded-circle" style={{ width: "600px", height: "600px", background: "linear-gradient(135deg, rgba(1,112,185,0.1) 0%, rgba(255,255,255,0) 100%)", top: "-100px", left: "-100px", zIndex: 0 }}></div>
+    <div className="hero-section position-relative overflow-hidden text-white d-flex align-items-center" style={{ minHeight: "80vh" }}>
       
+      {/* Video Background */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        className="position-absolute w-100 h-100" 
+        style={{ objectFit: "cover", top: 0, left: 0, zIndex: -2 }}
+      >
+        {/* We use a placeholder URL for the video, user should replace with their actual high-quality medical video in public/videos/ */}
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Professional Blue Overlay */}
+      <div 
+        className="position-absolute w-100 h-100" 
+        style={{ 
+          top: 0, left: 0, zIndex: -1,
+          background: "linear-gradient(135deg, rgba(1, 112, 185, 0.9) 0%, rgba(1, 112, 185, 0.7) 100%)"
+        }}
+      ></div>
+
       <Container className="position-relative" style={{ zIndex: 1 }}>
-        <Row className="align-items-center g-5">
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="d-flex align-items-center mb-3">
-                <div className="d-flex text-warning me-2">
-                  {[...Array(5)].map((_, i) => <FaStar key={i} />)}
-                </div>
-                <span className="text-muted fw-semibold">4.9/5 from 500+ Patients</span>
-              </div>
-              
-              <h1 className="display-4 fw-bold text-dark mb-4" style={{ lineHeight: "1.2" }}>
-                Reliable & Top-Notch <span className="text-primary">Medical Services</span> in Sugar Land
-              </h1>
-              
-              <p className="lead text-muted mb-5">
-                Compassionate primary care for parents, adults, elderly patients, and children. Dr. Aman Jafar and the team are here to keep your family healthy.
-              </p>
-              
-              <div className="d-flex flex-wrap gap-3 mb-4">
-                <Button as={Link} href="tel:+12817711261" variant="primary" size="lg" className="btn-primary-custom shadow fw-bold d-flex align-items-center gap-2">
-                  <FaPhoneAlt /> Call Us 24/7
-                </Button>
-                <Button as={Link} href="/insurance" variant="outline-primary" size="lg" className="border-2 fw-bold d-flex align-items-center gap-2 bg-white">
-                  <FaShieldAlt /> Verify Insurance
-                </Button>
-              </div>
-            </motion.div>
-          </Col>
-          
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="h-100"
-            >
-              <StepForm />
-            </motion.div>
+        <Row className="justify-content-center text-center">
+          <Col lg={10} xl={9}>
+            
+            <Badge bg="light" text="primary" className="px-3 py-2 rounded-pill mb-4 border border-white shadow-sm" style={{ fontSize: "0.9rem", letterSpacing: "1px" }}>
+              NOW ACCEPTING NEW PATIENTS
+            </Badge>
+
+            <h1 className="display-3 fw-bold mb-4 text-shadow" style={{ lineHeight: 1.2 }}>
+              Compassionate Medical Care<br />
+              <span className="text-warning">For Your Entire Family</span>
+            </h1>
+
+            <p className="lead fw-normal mb-5 px-md-5 text-white-50 fs-4 text-shadow">
+              Dr. Aman Jafar provides top-notch, continuous care for children, adults, and elderly patients in Sugar Land, Texas.
+            </p>
+
+            {/* Dual CTAs (Kemah Palms Style) */}
+            <div className="d-flex flex-column flex-sm-row justify-content-center gap-4 mb-5">
+              <Link href="/appointment" className="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg d-flex align-items-center justify-content-center gap-2 hover-scale transition-all text-dark">
+                <FaCalendarAlt /> Book Appointment
+              </Link>
+              <Link href="/insurance" className="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg d-flex align-items-center justify-content-center gap-2 hover-white transition-all border-2">
+                <FaShieldAlt /> Verify Insurance
+              </Link>
+            </div>
+
+            {/* Trust Strip */}
+            <div className="bg-white bg-opacity-10 backdrop-blur rounded-4 p-4 border border-white border-opacity-25 shadow-sm d-inline-block">
+              <Row className="align-items-center justify-content-center gy-3 text-start">
+                <Col xs={12} md="auto" className="d-flex align-items-center gap-3 pe-md-4 border-end-md border-white border-opacity-25">
+                  <div className="bg-primary text-white rounded-circle p-3 shadow-sm d-flex align-items-center justify-content-center">
+                    <FaPhoneAlt size={20} />
+                  </div>
+                  <div>
+                    <span className="d-block text-white-50 small text-uppercase fw-semibold" style={{ letterSpacing: "1px" }}>Need Immediate Help?</span>
+                    <a href="tel:+12817711261" className="fw-bold fs-5 text-white text-decoration-none hover-warning transition-all">281-771-1261</a>
+                  </div>
+                </Col>
+                <Col xs={12} md="auto" className="d-flex align-items-center gap-3 ps-md-4">
+                  <div className="bg-success text-white rounded-circle p-3 shadow-sm d-flex align-items-center justify-content-center">
+                    <FaShieldAlt size={20} />
+                  </div>
+                  <div>
+                    <span className="d-block text-white-50 small text-uppercase fw-semibold" style={{ letterSpacing: "1px" }}>Major Insurances</span>
+                    <span className="fw-bold fs-5 text-white">Accepted Here</span>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+
           </Col>
         </Row>
-        
-        {/* Trust Banner */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-5 pt-4 border-top"
-        >
-          <p className="text-center text-muted fw-semibold mb-3">ACCEPTED INSURANCES INCLUDE:</p>
-          <div className="d-flex flex-wrap justify-content-center gap-4 align-items-center opacity-75">
-            <h5 className="mb-0 fw-bold text-secondary">Medicare</h5>
-            <h5 className="mb-0 fw-bold text-secondary">BlueCross BlueShield</h5>
-            <h5 className="mb-0 fw-bold text-secondary">Aetna</h5>
-            <h5 className="mb-0 fw-bold text-secondary">Cigna</h5>
-            <h5 className="mb-0 fw-bold text-secondary">UnitedHealthcare</h5>
-          </div>
-        </motion.div>
       </Container>
-    </section>
+    </div>
   );
 }
