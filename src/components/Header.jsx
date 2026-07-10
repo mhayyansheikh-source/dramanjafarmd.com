@@ -37,10 +37,11 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-lg-center gap-3">
-            <Nav.Link as={Link} href="#about" className="fw-semibold text-dark">About Us</Nav.Link>
-            <Nav.Link as={Link} href="#services" className="fw-semibold text-dark">Services</Nav.Link>
-            <Nav.Link as={Link} href="#patients" className="fw-semibold text-dark">Patients</Nav.Link>
-            <Nav.Link as={Link} href="#testimonials" className="fw-semibold text-dark">Reviews</Nav.Link>
+            <Nav.Link as={Link} href="/about" className="fw-semibold text-dark">About Us</Nav.Link>
+            <Nav.Link as={Link} href="/services" className="fw-semibold text-dark">Services</Nav.Link>
+            <Nav.Link as={Link} href="/patients" className="fw-semibold text-dark">Patient Resources</Nav.Link>
+            <Nav.Link as={Link} href="/blog" className="fw-semibold text-dark">Blog</Nav.Link>
+            <Nav.Link as={Link} href="/contact" className="fw-semibold text-dark">Contact</Nav.Link>
             <Button variant="primary" className="btn-primary-custom ms-lg-3 mt-3 mt-lg-0">
               Book Appointment
             </Button>

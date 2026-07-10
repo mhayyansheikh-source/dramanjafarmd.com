@@ -1,28 +1,25 @@
+import Services from "@/components/Services";
+import Categories from "@/components/Categories";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import AboutUs from "@/components/AboutUs";
-import Categories from "@/components/Categories";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import FomoElement from "@/components/FomoElement";
 
-export default function Home() {
+export const metadata = {
+  title: "Services | Dr. Aman Jafar MD",
+  description: "Comprehensive medical services and treatments offered by Dr. Aman Jafar.",
+};
+
+export default function ServicesPage() {
   return (
     <main className="d-flex flex-column min-vh-100">
       <FomoElement />
       <TopBar />
       <Header />
-      
       <div className="flex-grow-1">
-        <HeroSection />
-        <AboutUs />
         <Categories />
         <Services />
-        <Testimonials />
       </div>
-
       <Footer />
     </main>
   );

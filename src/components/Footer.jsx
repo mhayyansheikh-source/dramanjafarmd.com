@@ -3,6 +3,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -31,10 +32,11 @@ export default function Footer() {
           <Col lg={2} md={6}>
             <h5 className="fw-bold mb-3 text-uppercase">Quick Links</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><a href="#about" className="text-white-50 text-decoration-none">About Us</a></li>
-              <li className="mb-2"><a href="#services" className="text-white-50 text-decoration-none">Services</a></li>
-              <li className="mb-2"><a href="#patients" className="text-white-50 text-decoration-none">Patients</a></li>
-              <li className="mb-2"><a href="#testimonials" className="text-white-50 text-decoration-none">Reviews</a></li>
+              <li className="mb-2"><Link href="/about" className="text-white-50 text-decoration-none">About Us</Link></li>
+              <li className="mb-2"><Link href="/services" className="text-white-50 text-decoration-none">Services</Link></li>
+              <li className="mb-2"><Link href="/patients" className="text-white-50 text-decoration-none">Patient Resources</Link></li>
+              <li className="mb-2"><Link href="/blog" className="text-white-50 text-decoration-none">Blog</Link></li>
+              <li className="mb-2"><Link href="/contact" className="text-white-50 text-decoration-none">Contact Us</Link></li>
             </ul>
           </Col>
           
