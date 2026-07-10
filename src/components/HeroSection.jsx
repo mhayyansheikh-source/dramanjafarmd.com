@@ -39,31 +39,31 @@ export default function HeroSection() {
         <Row className="justify-content-center text-center">
           <Col lg={10} xl={9}>
             
-            <span className="badge-pill-outline bg-white text-ink d-inline-block mb-4 shadow-sm" style={{ fontWeight: 600, letterSpacing: "1px" }}>
+            <span className="badge-pill-outline bg-white text-ink d-inline-block mb-4 shadow-sm fade-in" style={{ fontWeight: 600, letterSpacing: "1px" }}>
               NOW ACCEPTING NEW PATIENTS
             </span>
 
-            <h1 className="display-xxl mb-4" style={{ color: "var(--color-on-ink)" }}>
-              Compassionate Medical Care<br />
-              <span className="text-primary-soft">For Your Entire Family</span>
+            <h1 className="display-2 mb-4 fade-in" style={{ color: "var(--color-on-ink)", animationDelay: "0.1s" }}>
+              Top-Notch Primary Care<br />
+              <span className="text-primary-soft">In Sugar Land</span>
             </h1>
 
-            <p className="lead fw-normal mb-5 px-md-5 text-cloud fs-4">
-              Dr. Aman Jafar provides top-notch, continuous care for children, adults, and elderly patients in Sugar Land, Texas.
+            <p className="lead fw-normal mb-5 px-md-5 text-cloud fs-4 fade-in" style={{ animationDelay: "0.2s" }}>
+              Dr. Aman Jafar provides continuous, compassionate care for your entire family, from pediatrics to geriatrics.
             </p>
 
             {/* CTAs (HP Enterprise Style) */}
-            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-5">
-              <Link href="/appointment" className="btn button-primary d-flex align-items-center gap-2">
+            <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-5 fade-in" style={{ animationDelay: "0.3s" }}>
+              <Link href="/appointment" className="btn button-primary hover-lift d-flex align-items-center gap-2">
                 <FaCalendarAlt /> Book Appointment
               </Link>
-              <Link href="/insurance" className="btn button-outline-ink text-white border-white d-flex align-items-center gap-2" style={{ backgroundColor: 'transparent' }}>
+              <Link href="/insurance" className="btn button-outline-ink text-white border-white hover-lift d-flex align-items-center gap-2" style={{ backgroundColor: 'transparent' }}>
                 <FaShieldAlt /> Verify Insurance
               </Link>
             </div>
 
             {/* Trust Strip */}
-            <div className="bg-canvas p-4 shadow-soft-lift d-inline-block" style={{ borderRadius: "var(--rounded-xl)" }}>
+            <div className="bg-canvas p-4 shadow-soft-lift hover-lift d-inline-block fade-in" style={{ borderRadius: "var(--rounded-xl)", animationDelay: "0.4s" }}>
               <Row className="align-items-center justify-content-center gy-3 text-start">
                 <Col xs={12} md="auto" className="d-flex align-items-center gap-3 pe-md-4 border-end-md" style={{ borderColor: "var(--color-hairline)" }}>
                   <div className="bg-primary text-white rounded-circle p-3 d-flex align-items-center justify-content-center">

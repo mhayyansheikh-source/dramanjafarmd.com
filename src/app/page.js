@@ -25,8 +25,8 @@ export default function Home() {
         <MedicalPrograms />
         <Testimonials />
         <FacilityGallery />
-        <FinalCTA />
         <FAQ />
+        <FinalCTA />
       </div>
 
       <Footer />
