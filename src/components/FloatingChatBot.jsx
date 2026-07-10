@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCommentMedical, FaTimes, FaPaperPlane, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
+import SVGLogo from "./SVGLogo";
 import Link from "next/link";
 import { Form, Button } from "react-bootstrap";
 
@@ -119,7 +120,7 @@ export default function FloatingChatBot() {
                     AJ
                   </div>
                   <div className="rounded-circle overflow-hidden border border-2 border-white shadow-sm position-relative bg-primary d-flex align-items-center justify-content-center text-white fw-bold" style={{ width: "45px", height: "45px", marginLeft: "-15px", zIndex: 1 }}>
-                    <Image src="/images/logo.png" alt="Logo" width={30} height={30} style={{ objectFit: "contain" }} />
+                    <SVGLogo width="30" height="30" />
                   </div>
                 </div>
                 
@@ -239,7 +240,7 @@ export default function FloatingChatBot() {
             {/* Footer */}
             <div className="bg-light p-2 text-center border-top">
               <small className="text-muted" style={{ fontSize: "0.7rem" }}>
-                Powered by <Image src="/images/logo.png" alt="Logo" width={15} height={15} className="d-inline ms-1 opacity-50" /> Dr. Aman Jafar MD
+                Powered by <SVGLogo width="15" height="15" className="d-inline ms-1 opacity-50" /> Dr. Aman Jafar MD
               </small>
             </div>
 

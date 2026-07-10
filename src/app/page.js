@@ -7,6 +7,7 @@ import MedicalPrograms from "@/components/MedicalPrograms";
 import Testimonials from "@/components/Testimonials";
 import FacilityGallery from "@/components/FacilityGallery";
 import FinalCTA from "@/components/FinalCTA";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FomoElement from "@/components/FomoElement";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Testimonials />
         <FacilityGallery />
         <FinalCTA />
+        <FAQ />
       </div>
 
       <Footer />

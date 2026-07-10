@@ -1,26 +1,33 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Navbar, Nav, Container, Button, NavDropdown } from "react-bootstrap";
 import Link from "next/link";
-import Image from "next/image";
-import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import SVGLogo from "./SVGLogo";
 
 export default function Header() {
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      {/* Top Utility Bar (Extracted from old TopBar if needed, or integrated here. We'll keep TopBar separate, this is just the main header) */}
-      <Navbar bg="white" expand="lg" sticky="top" className="py-3 shadow-sm border-bottom">
+      <Navbar 
+        expand="lg" 
+        className={`sticky-top transition-all py-3 shadow-sm border-bottom ${isScrolled ? 'bg-white' : 'bg-white'}`}
+      >
         <Container>
           {/* Logo */}
           <Navbar.Brand as={Link} href="/" className="d-flex align-items-center me-4">
-            <Image 
-              src="/images/logo.png" 
-              alt="Dr. Aman Jafar MD" 
-              width={220} 
-              height={60} 
-              style={{ objectFit: "contain" }}
-              priority
-            />
+            <SVGLogo width="220" height="60" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="main-navbar-nav" className="border-0 shadow-none">

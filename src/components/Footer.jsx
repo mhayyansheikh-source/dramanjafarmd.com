@@ -2,8 +2,8 @@
 
 import { Container, Row, Col } from "react-bootstrap";
 import Link from "next/link";
-import Image from "next/image";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn, FaClock } from "react-icons/fa";
+import SVGLogo from "./SVGLogo";
 
 export default function Footer() {
   return (
@@ -13,13 +13,7 @@ export default function Footer() {
           {/* Column 1: Brand & Mission */}
           <Col lg={4} md={6}>
             <div className="mb-4 bg-white p-3 rounded-3 d-inline-block">
-              <Image 
-                src="/images/logo.png" 
-                alt="Dr. Aman Jafar MD" 
-                width={200} 
-                height={55} 
-                style={{ objectFit: "contain" }}
-              />
+              <SVGLogo width="200" height="55" />
             </div>
             <p className="text-white-50 pe-lg-4 lh-lg mb-4">
               Providing reliable, top-notch medical services for parents, adults, elderly patients, and children in Sugar Land, Texas. Compassionate primary care you can trust.
