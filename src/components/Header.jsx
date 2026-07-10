@@ -49,7 +49,7 @@ export default function Header() {
             <Button as={Link} href="/insurance" variant="outline-primary" className="ms-lg-3 mt-3 mt-lg-0 border-2 fw-semibold">
               Verify Insurance
             </Button>
-            <Button variant="primary" className="btn-primary-custom ms-lg-2 mt-3 mt-lg-0 shadow-sm fw-semibold">
+            <Button as={Link} href="/appointment" variant="primary" className="btn-primary-custom ms-lg-2 mt-3 mt-lg-0 shadow-sm fw-semibold">
               Book Appointment
             </Button>
           </Nav>

@@ -27,7 +27,7 @@ export default function FinalCTA() {
             <Button as={Link} href="tel:+12817711261" variant="light" size="lg" className="fw-bold text-primary d-flex align-items-center gap-2 shadow-sm px-4 py-3 rounded-3">
               <FaPhoneAlt /> Call 281-771-1261
             </Button>
-            <Button as={Link} href="/contact" variant="outline-light" size="lg" className="border-2 fw-bold d-flex align-items-center gap-2 px-4 py-3 rounded-3 hover-white">
+            <Button as={Link} href="/appointment" variant="outline-light" size="lg" className="border-2 fw-bold d-flex align-items-center gap-2 px-4 py-3 rounded-3 hover-white">
               <FaCalendarCheck /> Request Appointment
             </Button>
           </div>

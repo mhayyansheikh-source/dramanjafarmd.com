@@ -138,7 +138,7 @@ export default function FloatingChatBot() {
             {/* Quick Action Pills */}
             <div className="bg-light border-bottom p-2 d-flex gap-2 overflow-auto" style={{ whiteSpace: "nowrap" }}>
               <Link href="/insurance" className="badge bg-white text-dark border p-2 text-decoration-none shadow-sm">Verify Insurance</Link>
-              <Link href="/contact" className="badge bg-white text-dark border p-2 text-decoration-none shadow-sm">Book Appointment</Link>
+              <Link href="/appointment" className="badge bg-white text-dark border p-2 text-decoration-none shadow-sm">Book Appointment</Link>
               <Link href="/patients" className="badge bg-white text-dark border p-2 text-decoration-none shadow-sm">Patient Portal</Link>
             </div>
 
