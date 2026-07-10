@@ -84,9 +84,9 @@ export default function Footer() {
             
             <h6 className="mb-3 mt-4" style={{ fontWeight: 500, color: "var(--color-on-primary)" }}>Legal</h6>
             <ul className="list-unstyled d-flex flex-wrap gap-3">
-              <li><Link href="#" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>Privacy Policy</Link></li>
-              <li><Link href="#" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>Terms of Service</Link></li>
-              <li><Link href="#" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>HIPAA Compliance</Link></li>
+              <li><Link href="/privacy" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>Terms of Service</Link></li>
+              <li><Link href="/hipaa" className="text-white text-decoration-none" style={{ fontSize: "12px", opacity: 0.6 }}>HIPAA Compliance</Link></li>
             </ul>
           </Col>
         </Row>
