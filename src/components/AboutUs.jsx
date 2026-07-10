@@ -1,65 +1,79 @@
 "use client";
 
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import Image from "next/image";
+import Link from "next/link";
+import { FaUserMd, FaCheckCircle } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
-    <section id="about" className="section-padding bg-white overflow-hidden">
-      <Container>
-        <Row className="align-items-center g-5">
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="position-relative"
-            >
-              <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ aspectRatio: "4/3" }}>
-                <Image 
-                  src="/images/dr-aman-jafar.jpeg" 
-                  alt="Dr. Aman Jafar"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              
-              {/* Experience Badge */}
-              <div className="position-absolute bg-primary text-white p-3 rounded-3 shadow" style={{ bottom: "-20px", right: "-20px", zIndex: 2 }}>
-                <h3 className="fw-bold mb-0 text-center">20+</h3>
-                <span className="small">Years Experience</span>
-              </div>
-            </motion.div>
+    <div className="py-5 bg-white" id="about">
+      <Container className="py-md-5">
+        <Row className="align-items-center gy-5">
+          {/* Left Side: Professional Image */}
+          <Col lg={5} className="position-relative">
+            <div className="position-relative rounded-4 overflow-hidden shadow-lg" style={{ minHeight: "500px" }}>
+              {/* Note: User should replace this placeholder with Dr. Jafar's real high-quality photo in public/images/ */}
+              <Image 
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"
+                alt="Dr. Aman Jafar MD" 
+                fill 
+                style={{ objectFit: "cover", objectPosition: "top" }}
+                className="hover-scale transition-all"
+              />
+            </div>
+            
+            {/* Floating Badge */}
+            <div className="position-absolute bottom-0 start-0 translate-middle-x bg-primary text-white p-4 rounded-3 shadow-lg ms-5 mb-5 d-none d-md-block">
+              <h3 className="fw-bold mb-0">20+</h3>
+              <p className="mb-0 small fw-semibold text-uppercase" style={{ letterSpacing: "1px" }}>Years Experience</p>
+            </div>
           </Col>
-          
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h6 className="text-primary fw-bold text-uppercase tracking-wide mb-2">About Us</h6>
-              <h2 className="display-6 fw-bold text-dark mb-4">Meet Dr. Aman Jafar</h2>
-              
-              <p className="text-muted mb-4" style={{ lineHeight: "1.8" }}>
-                At Sugar Land Physicians, we are dedicated to providing the highest quality healthcare for you and your loved ones. Dr. Aman Jafar brings decades of experience in internal and family medicine, ensuring that every patient receives personalized, compassionate care.
-              </p>
-              
-              <p className="text-muted mb-4" style={{ lineHeight: "1.8" }}>
-                Our modern facility is equipped to handle everything from routine checkups and vaccinations to complex chronic disease management. Your health is our priority.
-              </p>
-              
-              <div className="d-flex gap-3">
-                <Button variant="primary" className="btn-primary-custom">Read Full Bio</Button>
-                <Button variant="outline-primary" className="btn-outline-custom">Contact Clinic</Button>
-              </div>
-            </motion.div>
+
+          {/* Right Side: Welcome Narrative */}
+          <Col lg={6} className="offset-lg-1">
+            <Badge bg="primary" className="px-3 py-2 rounded-pill mb-3 fw-semibold text-uppercase" style={{ letterSpacing: "2px" }}>
+              Meet The Doctor
+            </Badge>
+            <h2 className="display-5 fw-bold mb-4 text-dark">
+              Welcome to <span className="text-primary">Dr. Aman Jafar MD</span>
+            </h2>
+            <p className="lead text-muted mb-4">
+              Providing compassionate, comprehensive medical care for your entire family in Sugar Land, Texas.
+            </p>
+            <p className="text-secondary mb-4 lh-lg">
+              At our practice, we treat every patient like family. With extensive experience in Internal Medicine, Pediatrics, and Geriatrics, Dr. Jafar is committed to delivering highly personalized care. Whether you are seeking preventive healthcare, chronic disease management, or acute care, we are here to support your journey to optimal health.
+            </p>
+            
+            <Row className="mb-4 g-3">
+              <Col sm={6}>
+                <div className="d-flex align-items-center text-dark fw-semibold">
+                  <FaCheckCircle className="text-primary me-2" size={20} /> Board Certified
+                </div>
+              </Col>
+              <Col sm={6}>
+                <div className="d-flex align-items-center text-dark fw-semibold">
+                  <FaCheckCircle className="text-primary me-2" size={20} /> Texas Medical Board
+                </div>
+              </Col>
+              <Col sm={6}>
+                <div className="d-flex align-items-center text-dark fw-semibold">
+                  <FaCheckCircle className="text-primary me-2" size={20} /> Compassionate Care
+                </div>
+              </Col>
+              <Col sm={6}>
+                <div className="d-flex align-items-center text-dark fw-semibold">
+                  <FaCheckCircle className="text-primary me-2" size={20} /> Modern Facility
+                </div>
+              </Col>
+            </Row>
+
+            <Button as={Link} href="/about" variant="outline-primary" size="lg" className="rounded-pill px-5 fw-bold mt-2 hover-white">
+              <FaUserMd className="me-2" /> Read Full Biography
+            </Button>
           </Col>
         </Row>
       </Container>
-    </section>
+    </div>
   );
 }

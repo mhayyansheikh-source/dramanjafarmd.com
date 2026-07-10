@@ -3,8 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import InsurancePartners from "@/components/InsurancePartners";
 import AboutUs from "@/components/AboutUs";
-import Categories from "@/components/Categories";
-import Services from "@/components/Services";
+import MedicalPrograms from "@/components/MedicalPrograms";
 import Testimonials from "@/components/Testimonials";
 import FacilityGallery from "@/components/FacilityGallery";
 import FinalCTA from "@/components/FinalCTA";
@@ -22,8 +21,7 @@ export default function Home() {
         <HeroSection />
         <InsurancePartners />
         <AboutUs />
-        <Categories />
-        <Services />
+        <MedicalPrograms />
         <Testimonials />
         <FacilityGallery />
         <FinalCTA />
