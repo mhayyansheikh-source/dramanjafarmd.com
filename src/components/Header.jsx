@@ -40,6 +40,7 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-lg-center gap-3">
+            <Nav.Link as={Link} href="/" className="fw-semibold text-dark">Home</Nav.Link>
             <Nav.Link as={Link} href="/about" className="fw-semibold text-dark">About Us</Nav.Link>
             <Nav.Link as={Link} href="/services" className="fw-semibold text-dark">Services</Nav.Link>
             <Nav.Link as={Link} href="/patients" className="fw-semibold text-dark">Patient Resources</Nav.Link>
