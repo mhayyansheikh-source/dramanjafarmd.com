@@ -1,87 +1,116 @@
 "use client";
 
 import { Container, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn, FaClock } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white pt-5 pb-4" style={{ borderTop: "5px solid var(--primary)" }}>
-      <Container>
-        <Row className="gy-4 mb-4">
+    <footer className="bg-dark text-white pt-5 pb-4 mt-auto border-top border-5 border-primary">
+      <Container className="pt-4">
+        <Row className="gy-5">
+          {/* Column 1: Brand & Mission */}
           <Col lg={4} md={6}>
-            <Image 
-              src="/images/logo.png" 
-              alt="Dr. Aman Jafar Logo" 
-              width={200} 
-              height={55}
-              style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
-              className="mb-3"
-            />
-            <p className="text-white-50 small pe-lg-4">
-              Providing reliable, top-notch medical services for parents, adults, elderly patients, and children in Sugar Land, Texas.
+            <div className="mb-4 bg-white p-3 rounded-3 d-inline-block">
+              <Image 
+                src="/images/logo.png" 
+                alt="Dr. Aman Jafar MD" 
+                width={200} 
+                height={55} 
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <p className="text-white-50 pe-lg-4 lh-lg mb-4">
+              Providing reliable, top-notch medical services for parents, adults, elderly patients, and children in Sugar Land, Texas. Compassionate primary care you can trust.
             </p>
-            <div className="d-flex gap-3 mt-3">
-              <a href="#" className="text-white"><FaFacebook size={20} /></a>
-              <a href="#" className="text-white"><FaTwitter size={20} /></a>
-              <a href="#" className="text-white"><FaLinkedin size={20} /></a>
+            <div className="d-flex gap-3">
+              <a href="#" className="bg-white bg-opacity-10 text-white p-2 rounded-circle d-flex align-items-center justify-content-center hover-bg-primary transition-all" style={{ width: "40px", height: "40px" }}>
+                <FaFacebookF />
+              </a>
+              <a href="#" className="bg-white bg-opacity-10 text-white p-2 rounded-circle d-flex align-items-center justify-content-center hover-bg-primary transition-all" style={{ width: "40px", height: "40px" }}>
+                <FaLinkedinIn />
+              </a>
             </div>
           </Col>
-          
+
+          {/* Column 2: Quick Links */}
           <Col lg={2} md={6}>
-            <h5 className="fw-bold mb-3 text-uppercase">Quick Links</h5>
-            <ul className="list-unstyled">
-              <li className="mb-2"><Link href="/about" className="text-white-50 text-decoration-none">About Us</Link></li>
-              <li className="mb-2"><Link href="/services" className="text-white-50 text-decoration-none">Services</Link></li>
-              <li className="mb-2"><Link href="/patients" className="text-white-50 text-decoration-none">Patient Resources</Link></li>
-              <li className="mb-2"><Link href="/blog" className="text-white-50 text-decoration-none">Blog</Link></li>
-              <li className="mb-2"><Link href="/contact" className="text-white-50 text-decoration-none">Contact Us</Link></li>
+            <h5 className="fw-bold mb-4 text-uppercase tracking-wider" style={{ letterSpacing: "1px" }}>Quick Links</h5>
+            <ul className="list-unstyled d-flex flex-column gap-3">
+              <li><Link href="/" className="text-white-50 text-decoration-none hover-white transition-all">Home</Link></li>
+              <li><Link href="/about" className="text-white-50 text-decoration-none hover-white transition-all">Meet Dr. Jafar</Link></li>
+              <li><Link href="/services" className="text-white-50 text-decoration-none hover-white transition-all">Medical Services</Link></li>
+              <li><Link href="/patients" className="text-white-50 text-decoration-none hover-white transition-all">Patient Portal</Link></li>
+              <li><Link href="/insurance" className="text-white-50 text-decoration-none hover-white transition-all">Verify Insurance</Link></li>
+              <li><Link href="/contact" className="text-white-50 text-decoration-none hover-white transition-all">Contact Us</Link></li>
             </ul>
           </Col>
-          
+
+          {/* Column 3: Contact Info */}
           <Col lg={3} md={6}>
-            <h5 className="fw-bold mb-3 text-uppercase">Contact Info</h5>
-            <ul className="list-unstyled text-white-50 small">
-              <li className="mb-3 d-flex">
-                <FaMapMarkerAlt className="me-3 mt-1 text-primary" size={18} />
-                <span>3531 Town Center Blvd, S. Ste 101<br/>Sugar Land, Texas 77479</span>
+            <h5 className="fw-bold mb-4 text-uppercase tracking-wider" style={{ letterSpacing: "1px" }}>Contact Info</h5>
+            <ul className="list-unstyled d-flex flex-column gap-4">
+              <li className="d-flex align-items-start gap-3">
+                <FaMapMarkerAlt className="text-primary mt-1 fs-5 flex-shrink-0" />
+                <span className="text-white-50 lh-base">
+                  3531 Town Center Blvd, S. Ste 101<br />
+                  Sugar Land, Texas 77479
+                </span>
               </li>
-              <li className="mb-3 d-flex align-items-center">
-                <FaPhoneAlt className="me-3 text-primary" />
-                <a href="tel:+18324344558" className="text-white-50 text-decoration-none">+1-832-434-4558</a>
+              <li className="d-flex align-items-center gap-3">
+                <FaPhoneAlt className="text-primary fs-5 flex-shrink-0" />
+                <a href="tel:+12817711261" className="text-white-50 text-decoration-none hover-white transition-all">281-771-1261</a>
               </li>
-              <li className="mb-3 d-flex align-items-center">
-                <FaEnvelope className="me-3 text-primary" />
-                <a href="mailto:info@dramanjafarmd.com" className="text-white-50 text-decoration-none">info@dramanjafarmd.com</a>
+              <li className="d-flex align-items-center gap-3">
+                <FaEnvelope className="text-primary fs-5 flex-shrink-0" />
+                <a href="mailto:info@dramanjafarmd.com" className="text-white-50 text-decoration-none hover-white transition-all">info@dramanjafarmd.com</a>
+              </li>
+              <li className="d-flex align-items-start gap-3">
+                <FaClock className="text-primary mt-1 fs-5 flex-shrink-0" />
+                <span className="text-white-50 lh-base">
+                  Mon - Fri: 8:00 AM - 5:00 PM<br />
+                  Sat - Sun: Closed
+                </span>
               </li>
             </ul>
           </Col>
 
+          {/* Column 4: Accreditations & Legal */}
           <Col lg={3} md={6}>
-            <h5 className="fw-bold mb-3 text-uppercase">Clinic Hours</h5>
-            <ul className="list-unstyled text-white-50 small">
-              <li className="d-flex justify-content-between border-bottom border-secondary pb-2 mb-2">
-                <span>Monday - Friday</span>
-                <span>8:00 AM - 5:00 PM</span>
-              </li>
-              <li className="d-flex justify-content-between border-bottom border-secondary pb-2 mb-2">
-                <span>Saturday</span>
-                <span>9:00 AM - 1:00 PM</span>
-              </li>
-              <li className="d-flex justify-content-between">
-                <span>Sunday</span>
-                <span className="text-danger">Closed</span>
-              </li>
+            <h5 className="fw-bold mb-4 text-uppercase tracking-wider" style={{ letterSpacing: "1px" }}>Accreditations</h5>
+            <div className="d-flex flex-column gap-3 mb-4">
+              <div className="bg-white text-dark p-2 rounded-3 text-center fw-bold shadow-sm" style={{ border: "2px solid #e2e8f0" }}>
+                <span className="text-primary">✓</span> Board Certified Physician
+              </div>
+              <div className="bg-white text-dark p-2 rounded-3 text-center fw-bold shadow-sm" style={{ border: "2px solid #e2e8f0" }}>
+                <span className="text-primary">✓</span> Texas Medical Board
+              </div>
+            </div>
+            
+            <h6 className="fw-bold mb-3 text-uppercase tracking-wider mt-4" style={{ letterSpacing: "1px" }}>Legal</h6>
+            <ul className="list-unstyled d-flex flex-wrap gap-3">
+              <li><Link href="#" className="text-white-50 text-decoration-none hover-white small">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-white-50 text-decoration-none hover-white small">Terms of Service</Link></li>
+              <li><Link href="#" className="text-white-50 text-decoration-none hover-white small">HIPAA Compliance</Link></li>
             </ul>
           </Col>
         </Row>
+
+        <hr className="my-4 border-secondary opacity-25" />
         
-        <hr className="border-secondary" />
-        
-        <div className="text-center text-white-50 small mt-3">
-          &copy; {new Date().getFullYear()} Dr. Aman Jafar. All rights reserved. Designed for optimal patient care.
-        </div>
+        <Row className="align-items-center">
+          <Col md={6} className="text-center text-md-start mb-3 mb-md-0">
+            <p className="text-white-50 small mb-0">
+              &copy; {new Date().getFullYear()} Dr. Aman Jafar MD. All Rights Reserved.
+            </p>
+          </Col>
+          <Col md={6} className="text-center text-md-end">
+            <p className="text-white-50 small mb-0">
+              Sugar Land Physicians | Family Practice Doctor
+            </p>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );
