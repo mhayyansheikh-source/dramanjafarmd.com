@@ -38,10 +38,6 @@ export default function HeroSection() {
       <Container className="position-relative" style={{ zIndex: 1 }}>
         <Row className="justify-content-center text-center">
           <Col lg={10} xl={9}>
-            
-            <span className="badge-pill-outline bg-white text-ink d-inline-block mb-4 shadow-sm fade-in" style={{ fontWeight: 600, letterSpacing: "1px" }}>
-              NOW ACCEPTING NEW PATIENTS
-            </span>
 
             <h1 className="display-2 mb-4 fade-in" style={{ color: "var(--color-on-ink)", animationDelay: "0.1s" }}>
               Top-Notch Primary Care<br />

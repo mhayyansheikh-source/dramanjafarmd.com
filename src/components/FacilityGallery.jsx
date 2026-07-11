@@ -7,7 +7,7 @@ import Image from "next/image";
 const images = [
   "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop", // Modern clinic room
   "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2073&auto=format&fit=crop", // Clean waiting area
-  "https://images.unsplash.com/photo-1538108149393-cebb47ac7927?q=80&w=2070&auto=format&fit=crop"  // Therapy/Consultation room
+  "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop"  // Therapy/Consultation room
 ];
 
 export default function FacilityGallery() {
